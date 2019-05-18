@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <!-- Latest compiled and minified CSS -->
@@ -11,20 +12,128 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     
     <style>  
-      body { font-family: 'Source Sans Pro', sans-serif; }
+      body { 
+	    font-family: source_sans_pro_regular,"Source Sans Pro",Arial,sans-serif;
+		font-size: 100%;
+		line-height: 1.5em;
+	  }
       .future-web { font-family: 'Titillium Web', sans-serif; }
+	  .official-ribbon {
+		background-color: #f1f0f0;
+		color: #0d1034;
+		height: 26px;
+	  }
+	  .uscis-header {
+	    background-color: #036;
+        height: 78px;
+		border-radius: 0px;
+		display: block;
+		font-family: source_sans_pro_regular,"Source Sans Pro",Arial,sans-serif;
+		font-size: 100%;
+		margin-bottom: 0px;
+	  }
+	  .container {
+	    margin-left: 194.5px;
+	    margin-right: 194.5px;
+		width: 70%;
+	  }
+	  .header-area {
+	    margin-left: 194.5px;
+	    margin-right: 194.5px;
+		padding-top: 10px;
+	  }
+	  .uscis-logo {	  
+	    width: 200px;
+		height: 60px;
+	  }
+	  .banner-main {
+	    margin-bottom: 20px;
+	  }
+	  .ntcard {
+		min-height: 300px;
+		min-width: 300px;		
+	  }
+	  .ntcard-body {
+	    border: solid 1px #ccc;
+		min-height: 280px;
+		min-width: 280px;
+		display: block;
+		margin:8px;
+		box-shadow: 4px 4px 4px #CCC;
+	  }
+	  .ntcard-title {
+	    font-size: 2.8em;
+		text-align: center;
+		height:60px;
+		padding: 8px;
+	  }
+	  .ntcard-text {
+	    padding: 8px;
+		font-size:1.4em;
+	  }
+	  .main {
+	    font-size: 1.7em;
+		line-height: 1.7em;
+	  }
     </style>
   </head>
   
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a href="#">MDAS</a>
-    </nav>
-    <div class="container">
-      <h2 class="future-web">Welcome</h2>
-    </div>
+	<div>
+	  <nav class="navbar navbar-expand-lg navbar-light bg-light uscis-header">      
+	    <div class="header-area">
+		  <img class="uscis-logo" src="https://www.uscis.gov/sites/default/files/ocomm/images/USCIS_Logo-2x.png">
+	    </div>
+	  </nav>
+	</div>
+    <div class="container">      
+	  <div class="page">
+	    <h2 class="future-web banner-main">USCIS Modernized Analytic Services Center</h2>
+		<div class="row">
+		
+		  <div class="col-md-4">
+		    <div class="ntcard">
+			  <div class="ntcard-body">
+				<div class="ntcard-title">Explore
+				</div>
+				<div class="ntcard-text"></div>
+			  </div>  
+			</div> 
+		  </div>
+		  
+		  <div class="col-md-4">
+		    <div class="ntcard">
+			  <div class="ntcard-body">
+				<div class="ntcard-title">Analyze
+				</div>
+				<div class="ntcard-text"></div>
+			  </div>  
+			</div>		  
+		  </div>
+		  
+		  <div class="col-md-4">
+		    <div class="ntcard">
+			  <div class="ntcard-body">
+				<div class="ntcard-title">Visualize</div>
+				<div class="ntcard-text">
+				Phasellus pellentesque dapibus vulputate. Nullam vel neque commodo elit mollis viverra. Proin dictum tortor nisi, sed consectetur lectus interdum et. Sed eget mollis metus. Vestibulum sit amet risus id libero aliquam porta. Vivamus nec feugiat odio. Curabitur enim quam, euismod ut ante vel, consectetur pellentesque ligula. Sed sollicitudin fringilla velit, vitae imperdiet tortor efficitur id. Aenean ac suscipit elit, a sodales nisl. Vivamus neque enim, accumsan et nunc a, mollis ornare erat. 
+				</div>
+			  </div>  
+			</div>
+		  </div>
+		  
+		</div>
+		
+		<div class="row">
+		  <div class="col-md-12 main">
+		  Fusce eu dui ante. Suspendisse potenti. Duis ultrices, velit eget viverra hendrerit, velit tortor rutrum purus, ut laoreet diam augue a libero. Fusce bibendum vulputate lacus, non fermentum magna luctus dictum. Nam varius eleifend mi, a vehicula dolor pellentesque eu. Sed ac fringilla mi. Cras lobortis interdum eros, sit amet pulvinar risus. Proin malesuada, justo nec vehicula mattis, ante urna consectetur mi, in cursus nunc ligula quis sem. Nulla facilisi. Pellentesque quis felis non nisi molestie ultricies id eget quam.
+
+Phasellus pellentesque dapibus vulputate. Nullam vel neque commodo elit mollis viverra. Proin dictum tortor nisi, sed consectetur lectus interdum et. Sed eget mollis metus. Vestibulum sit amet risus id libero aliquam porta. Vivamus nec feugiat odio. Curabitur enim quam, euismod ut ante vel, consectetur pellentesque ligula. Sed sollicitudin fringilla velit, vitae imperdiet tortor efficitur id. Aenean ac suscipit elit, a sodales nisl. Vivamus neque enim, accumsan et nunc a, mollis ornare erat. Mauris imperdiet elit eu feugiat tristique. Fusce id ornare erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis gravida metus. Suspendisse mi orci, vehicula vel ipsum ut, dictum molestie mauris. Suspendisse eu blandit ligula.
+		  </div>
+		</div>
+	  </div>
   </body>
 </html>
