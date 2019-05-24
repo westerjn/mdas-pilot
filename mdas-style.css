@@ -1,0 +1,25 @@
+      body { 
+	    font-family: source_sans_pro_regular,"Source Sans Pro",Arial,sans-serif;
+		font-size: 100%;
+	  }
+      .future-font { font-family: 'Titillium Web', sans-serif; }
+
+	  .uscis-header {
+	    background-color: #036;
+        height: 78px;
+		border-radius: 0px;
+		display: block;
+		font-family: source_sans_pro_regular,"Source Sans Pro",Arial,sans-serif;
+		font-size: 100%;
+		margin-bottom: 0px;
+	  }
+	  .header-area {
+	    margin-left: 194.5px;
+	    margin-right: 194.5px;
+		padding-top: 10px;
+	  }
+	  .uscis-logo {	  
+	    width: 200px;
+		height: 60px;
+	  }
+
