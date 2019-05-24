@@ -1,3 +1,4 @@
+    
 <!doctype html>
 <html>
   <head>
@@ -13,72 +14,44 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    
+    <link rel="stylesheet" href="./mdas-style.css">
+    <link rel="stylesheet" type="text/css" href="./jquery.dataTables.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./jquery.dataTables.min.js"></script>
     <style>  
-      body { 
-	    font-family: source_sans_pro_regular,"Source Sans Pro",Arial,sans-serif;
-		font-size: 100%;
-		line-height: 1.5em;
-	  }
-      .future-web { font-family: 'Titillium Web', sans-serif; }
-	  .official-ribbon {
-		background-color: #f1f0f0;
-		color: #0d1034;
-		height: 26px;
-	  }
-	  .uscis-header {
-	    background-color: #036;
-        height: 78px;
-		border-radius: 0px;
-		display: block;
-		font-family: source_sans_pro_regular,"Source Sans Pro",Arial,sans-serif;
-		font-size: 100%;
-		margin-bottom: 0px;
-	  }
-	  .container {
-	    margin-left: 194.5px;
-	    margin-right: 194.5px;
-		width: 70%;
-	  }
-	  .header-area {
-	    margin-left: 194.5px;
-	    margin-right: 194.5px;
-		padding-top: 10px;
-	  }
-	  .uscis-logo {	  
-	    width: 200px;
-		height: 60px;
-	  }
-	  .banner-main {
-	    margin-bottom: 20px;
-	  }
-	  .ntcard {
-		min-height: 300px;
-		min-width: 300px;		
-	  }
-	  .ntcard-body {
-	    border: solid 1px #ccc;
-		min-height: 280px;
-		min-width: 280px;
-		display: block;
-		margin:8px;
-		box-shadow: 4px 4px 4px #CCC;
-	  }
-	  .ntcard-title {
-	    font-size: 2.8em;
-		text-align: center;
-		height:60px;
-		padding: 8px;
-	  }
-	  .ntcard-text {
-	    padding: 8px;
-	    font-size: 1.7em;
-		line-height: 1.7em;
-	  }
-	  .main {
-	    font-size: 1.7em;
-		line-height: 1.7em;
-	  }
+    .flex-container {
+        display: flex;
+        font-size:1.4em;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .pw {
+        border:solid 1px#ccc;
+        min-width: 1000px;
+        margin:10px;
+        padding:10px;
+    }
+    #panel1 {
+        height:40px;
+    }
+
+    .table-area { 
+        width:1000px;
+        margin-top:30px;
+        margin-bottom:30px;
+    }
+
+    .zbtn {
+        width:160px;
+        border:solid 1px #ccc;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin:10px;
+        padding:10px;
+        float:left;
+    }
     </style>
   </head>
   
@@ -90,53 +63,159 @@
 	    </div>
 	  </nav>
 	</div>
-    <div class="container">      
-	  <div class="page">
-	    <h2 class="future-web banner-main">USCIS Modernized Analytic Science Center</h2>
-		<div class="row">
-		
-		  <div class="col-md-4">
-		    <div class="ntcard">
-			  <div class="ntcard-body">
-				<div class="ntcard-title">Explore</div>
-				<div class="ntcard-text">
-				Explore a ten year timeframe of research and data on publicly traded U.S. companies.
-				</div>
-			  </div>  
-			</div> 
-		  </div>
-		  
-		  <div class="col-md-4">
-		    <div class="ntcard">
-			  <div class="ntcard-body">
-				<div class="ntcard-title">Analyze</div>
-				<div class="ntcard-text">
-				Manipulate criteria and factors to predict or forecast sector and industry outcomes.
-				</div>
-			  </div>  
-			</div>		  
-		  </div>
-		  
-		  <div class="col-md-4">
-		    <div class="ntcard">
-			  <div class="ntcard-body">
-				<div class="ntcard-title">Visualize</div>
-				<div class="ntcard-text">
-				Generate dynamic web visualizations for use with today's latest data science tools.
-				</div>
-			  </div>  
-			</div>
-		  </div>
-		  
-		</div>
-		
-		<div class="row">
-		  <div class="col-md-12 main">
-		  Fusce eu dui ante. Suspendisse potenti. Duis ultrices, velit eget viverra hendrerit, velit tortor rutrum purus, ut laoreet diam augue a libero. Fusce bibendum vulputate lacus, non fermentum magna luctus dictum. Nam varius eleifend mi, a vehicula dolor pellentesque eu. Sed ac fringilla mi. Cras lobortis interdum eros, sit amet pulvinar risus. Proin malesuada, justo nec vehicula mattis, ante urna consectetur mi, in cursus nunc ligula quis sem. Nulla facilisi. Pellentesque quis felis non nisi molestie ultricies id eget quam.
+    <div class="flex-container">
+      <div class="pw" id="panel1">USCIS Banner
 
-Phasellus pellentesque dapibus vulputate. Nullam vel neque commodo elit mollis viverra. Proin dictum tortor nisi, sed consectetur lectus interdum et. Sed eget mollis metus. Vestibulum sit amet risus id libero aliquam porta. Vivamus nec feugiat odio. Curabitur enim quam, euismod ut ante vel, consectetur pellentesque ligula. Sed sollicitudin fringilla velit, vitae imperdiet tortor efficitur id. Aenean ac suscipit elit, a sodales nisl. Vivamus neque enim, accumsan et nunc a, mollis ornare erat. Mauris imperdiet elit eu feugiat tristique. Fusce id ornare erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis gravida metus. Suspendisse mi orci, vehicula vel ipsum ut, dictum molestie mauris. Suspendisse eu blandit ligula.
-		  </div>
-		</div>
-	  </div>
+      </div>
+      
+      <div class="pw" id="panel2">
+        <div>
+          <h3>Select Analytic Weights:</h3>
+        </div>
+        <div>
+          <div class="zbtn">Stock Market Cap</div>
+          <div class="zbtn">Income</div>
+          <div class="zbtn">Expenses</div>          
+        </div>
+        <div>
+          <div class="zbtn">P/E</div>
+          <div class="zbtn">EPS</div>
+          <div class="zbtn">Dividends</div>        
+        </div>
+      </div>
+
+      <div class="pw" id="panel3">
+          <img src="barchart.png" width="960px">
+      </div>
+
+      <div class="table-area">
+        <table id="datatable" class="display demotable" style="border:solid 1px #ccc"></table>
+      </div>
+      
+
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+          $('#datatable').DataTable( {
+            data: dataSet,
+            columns: [
+                { title: "Sector", "data": "sector" },
+                { title: "Industry", "data": "industry" },
+                { title: "Company", "data": "company" },
+                { title: "Annual Income", "data": "income" },
+                { title: "Expenses", "data": "expenses" },
+                { title: "Profits", "data": "profit" },
+                { title: "Taxes", "data": "taxes" },
+                { title: "Market Cap", "data": "Stock Market Cap" },
+                { title: "Donations", "data": "charity" }
+            ]
+          } );
+        } );
+        var dataSet =
+        [{"id":1,"sector":"Health Care","industry":"Zulu Mike Victor Delta X-ray Uniform India Romeo Sierra Foxtrot Charlie Quebec Tango Lima Echo","company":"Rhyzio","income":"$314721.51","expenses":"$439593.66","profit":"$127875.58","taxes":"$622348.29","Stock Market Cap":"$225.51M","environmental credits":"$826577.02","charity":"$703019.07"},
+        {"id":2,"sector":"Consumer Services","industry":"Hotel Mike Tango Oscar Charlie Echo Romeo X-ray India Bravo Yankee Golf Zulu Kilo Papa","company":"Rooxo","income":"$936541.90","expenses":"$89610.45","profit":"$772766.30","taxes":"$7208.99","Stock Market Cap":"$2.54B","environmental credits":"$636867.47","charity":"$241059.14"},
+        {"id":3,"sector":"n/a","industry":"Foxtrot Golf Yankee Victor Hotel Lima Delta Tango Juliett Papa Kilo X-ray Alfa Quebec Zulu November Whiskey India Mike Uniform","company":"Realmix","income":"$874705.86","expenses":"$430519.49","profit":"$591994.39","taxes":"$459003.78","Stock Market Cap":"n/a","environmental credits":"$870703.53","charity":"$921822.53"},
+        {"id":4,"sector":"Consumer Services","industry":"Whiskey Lima Hotel Romeo India Mike Oscar Kilo Quebec X-ray November Uniform Delta Juliett Papa Yankee Golf Echo Victor Alfa","company":"Brightbean","income":"$858831.62","expenses":"$640074.74","profit":"$895348.04","taxes":"$692707.11","Stock Market Cap":"$2.92B","environmental credits":"$553085.32","charity":"$633054.04"},
+        {"id":5,"sector":"Health Care","industry":"Quebec November Victor Lima Zulu Bravo Kilo Delta Sierra Charlie Mike Juliett","company":"Kimia","income":"$958500.74","expenses":"$836909.35","profit":"$558495.82","taxes":"$933275.70","Stock Market Cap":"$38B","environmental credits":"$628906.71","charity":"$838289.19"},
+        {"id":6,"sector":"n/a","industry":"Foxtrot Romeo Quebec Uniform Lima Yankee Bravo Zulu November Papa Golf Sierra Whiskey Delta Echo Oscar Hotel Juliett","company":"Avamm","income":"$766621.22","expenses":"$966900.00","profit":"$552976.26","taxes":"$85434.86","Stock Market Cap":"$62M","environmental credits":"$610828.23","charity":"$17429.90"},
+        {"id":7,"sector":"n/a","industry":"Uniform Zulu Papa Yankee Lima Charlie Romeo India Tango Kilo X-ray Foxtrot","company":"Tagfeed","income":"$240305.16","expenses":"$42156.34","profit":"$837764.69","taxes":"$65162.64","Stock Market Cap":"n/a","environmental credits":"$590173.13","charity":"$559417.25"},
+        {"id":8,"sector":"Finance","industry":"Zulu Victor November Alfa Echo Foxtrot Uniform Lima Papa Sierra","company":"Realbridge","income":"$920533.55","expenses":"$688598.98","profit":"$813216.10","taxes":"$292419.62","Stock Market Cap":"$1.45B","environmental credits":"$720780.29","charity":"$716463.88"},
+        {"id":9,"sector":"n/a","industry":"Yankee Uniform Foxtrot Charlie Bravo Alfa Lima Golf Mike Echo X-ray Sierra","company":"Innojam","income":"$751295.78","expenses":"$828197.38","profit":"$81146.84","taxes":"$906761.39","Stock Market Cap":"n/a","environmental credits":"$53254.86","charity":"$902454.97"},
+        {"id":10,"sector":"Technology","industry":"Hotel Golf Romeo Victor Bravo Kilo Yankee Papa Alfa Juliett India Tango Oscar Mike Delta Lima","company":"Vidoo","income":"$191132.71","expenses":"$330414.16","profit":"$545280.70","taxes":"$102599.36","Stock Market Cap":"$3.74B","environmental credits":"$825487.21","charity":"$626069.55"},
+        {"id":11,"sector":"Consumer Services","industry":"Victor Bravo Echo Hotel Oscar Mike November Romeo Juliett Whiskey Tango Delta","company":"Devbug","income":"$591579.57","expenses":"$379185.22","profit":"$484490.73","taxes":"$801952.24","Stock Market Cap":"$871.53M","environmental credits":"$100822.33","charity":"$982214.05"},
+        {"id":12,"sector":"n/a","industry":"Papa Echo November Quebec Whiskey X-ray Uniform Juliett Lima Zulu Foxtrot Alfa Romeo India Mike Kilo Bravo Oscar Hotel","company":"Fatz","income":"$446443.68","expenses":"$97304.06","profit":"$457488.46","taxes":"$371239.74","Stock Market Cap":"n/a","environmental credits":"$316670.84","charity":"$77683.97"},
+        {"id":13,"sector":"n/a","industry":"Lima Mike Sierra Kilo Golf Tango Papa India Charlie Alfa Echo X-ray Hotel Bravo Zulu Whiskey Delta November","company":"Meezzy","income":"$658435.11","expenses":"$911951.40","profit":"$100102.59","taxes":"$976413.40","Stock Market Cap":"n/a","environmental credits":"$496484.59","charity":"$306732.60"},
+        {"id":14,"sector":"n/a","industry":"Kilo Zulu Lima Foxtrot X-ray Echo Golf Tango November Hotel Romeo","company":"Feedbug","income":"$491037.23","expenses":"$416511.92","profit":"$815851.39","taxes":"$664586.10","Stock Market Cap":"n/a","environmental credits":"$297712.96","charity":"$538760.87"},
+        {"id":15,"sector":"Energy","industry":"Alfa Whiskey Echo Tango Mike Sierra Yankee Foxtrot Uniform Victor Golf Hotel X-ray","company":"Zooveo","income":"$908897.06","expenses":"$509208.71","profit":"$62367.42","taxes":"$255604.54","Stock Market Cap":"$5.84B","environmental credits":"$442097.01","charity":"$399100.90"},
+        {"id":16,"sector":"Finance","industry":"Kilo Hotel Victor Golf Tango Alfa Whiskey Romeo Oscar Mike Charlie Zulu Bravo Lima Foxtrot Delta Quebec Yankee X-ray","company":"Voolia","income":"$441916.22","expenses":"$913016.89","profit":"$189137.68","taxes":"$540987.80","Stock Market Cap":"$365.71M","environmental credits":"$331214.78","charity":"$824781.53"},
+        {"id":17,"sector":"Technology","industry":"Tango Uniform India Foxtrot Oscar Yankee Zulu Whiskey Hotel Kilo","company":"Cogidoo","income":"$391579.88","expenses":"$129103.50","profit":"$545534.68","taxes":"$521602.98","Stock Market Cap":"$46.33B","environmental credits":"$664779.82","charity":"$431278.53"},
+        {"id":18,"sector":"n/a","industry":"X-ray Foxtrot Mike Charlie Uniform Sierra Alfa Quebec Zulu Golf India November Oscar","company":"Skipstorm","income":"$88702.53","expenses":"$356627.31","profit":"$676380.78","taxes":"$692380.36","Stock Market Cap":"n/a","environmental credits":"$65642.07","charity":"$830413.03"},
+        {"id":19,"sector":"Transportation","industry":"Charlie November Oscar Romeo India Delta Uniform Quebec Papa Kilo Sierra Bravo Echo Mike Hotel Alfa Zulu Foxtrot Tango","company":"Quimba","income":"$786621.20","expenses":"$480800.70","profit":"$951911.78","taxes":"$969971.70","Stock Market Cap":"$158.76M","environmental credits":"$118501.05","charity":"$584200.77"},
+        {"id":20,"sector":"Finance","industry":"Tango Delta Lima Quebec Echo Golf Oscar Alfa Whiskey Foxtrot Papa Bravo Kilo Mike X-ray Hotel Yankee","company":"Pixonyx","income":"$610952.57","expenses":"$477105.68","profit":"$397834.22","taxes":"$862077.72","Stock Market Cap":"n/a","environmental credits":"$808500.97","charity":"$876554.24"},
+        {"id":21,"sector":"Technology","industry":"Lima Whiskey Delta Juliett Victor India Uniform Foxtrot Kilo X-ray November Papa Zulu Tango Romeo","company":"Skivee","income":"$199119.51","expenses":"$907763.03","profit":"$40481.15","taxes":"$526463.26","Stock Market Cap":"$3.66B","environmental credits":"$145927.20","charity":"$269108.54"},
+        {"id":22,"sector":"Basic Industries","industry":"Oscar Tango Bravo X-ray Whiskey Mike Romeo Hotel India Juliett Golf","company":"Trunyx","income":"$548141.95","expenses":"$838804.91","profit":"$795349.69","taxes":"$377851.15","Stock Market Cap":"$1.6B","environmental credits":"$395151.07","charity":"$974144.77"},
+        {"id":23,"sector":"Finance","industry":"Alfa Foxtrot Yankee Zulu Kilo Whiskey Echo India Papa Juliett Charlie X-ray Tango Hotel Romeo November Lima Delta Golf Oscar","company":"Centimia","income":"$608304.40","expenses":"$133539.54","profit":"$608477.24","taxes":"$681107.01","Stock Market Cap":"$718.32M","environmental credits":"$638086.60","charity":"$43278.70"},
+        {"id":24,"sector":"Finance","industry":"Tango Lima Sierra Uniform Mike Papa Zulu India Hotel Foxtrot Kilo Quebec Delta Charlie X-ray Whiskey Echo Yankee Golf","company":"Kaymbo","income":"$136118.66","expenses":"$660025.21","profit":"$415978.69","taxes":"$753990.81","Stock Market Cap":"$580.22M","environmental credits":"$776369.60","charity":"$445477.60"},
+        {"id":25,"sector":"Public Utilities","industry":"Zulu Victor Alfa India November Sierra Juliett Papa Romeo Hotel Foxtrot Mike Oscar Kilo","company":"Divavu","income":"$866142.30","expenses":"$203196.45","profit":"$622027.34","taxes":"$136048.09","Stock Market Cap":"$772.35M","environmental credits":"$328517.01","charity":"$591979.52"},
+        {"id":26,"sector":"Technology","industry":"Juliett Victor Kilo Golf X-ray Foxtrot Zulu November Sierra Alfa Romeo Uniform Lima Papa Tango","company":"Demivee","income":"$231075.84","expenses":"$350583.73","profit":"$76401.55","taxes":"$677887.03","Stock Market Cap":"$1.19B","environmental credits":"$954732.88","charity":"$975889.54"},
+        {"id":27,"sector":"Consumer Durables","industry":"Romeo Delta Kilo Zulu Mike Charlie Uniform Papa Whiskey Oscar X-ray Echo Quebec India Bravo Juliett November Tango Lima Sierra","company":"Camimbo","income":"$442177.44","expenses":"$926890.41","profit":"$990698.07","taxes":"$92908.53","Stock Market Cap":"$9.82B","environmental credits":"$749469.66","charity":"$282667.36"},
+        {"id":28,"sector":"Finance","industry":"Echo Alfa India November Lima Bravo Whiskey Kilo Golf Victor Uniform Quebec Tango Charlie Foxtrot Papa Sierra Juliett Zulu","company":"Wordware","income":"$913972.96","expenses":"$833929.17","profit":"$863376.07","taxes":"$877708.49","Stock Market Cap":"n/a","environmental credits":"$328762.22","charity":"$152908.63"},
+        {"id":29,"sector":"Public Utilities","industry":"Juliett Echo Whiskey Charlie X-ray November Lima Kilo Yankee Tango Quebec Foxtrot Alfa Sierra","company":"Fliptune","income":"$704226.69","expenses":"$415421.94","profit":"$851012.64","taxes":"$740487.94","Stock Market Cap":"$5.6B","environmental credits":"$439844.09","charity":"$513943.13"},
+        {"id":30,"sector":"Technology","industry":"Delta Quebec Victor Tango Hotel Uniform Alfa Sierra Zulu Golf Oscar Juliett","company":"Wordify","income":"$174368.24","expenses":"$60322.63","profit":"$18091.52","taxes":"$272182.05","Stock Market Cap":"$10.83M","environmental credits":"$298076.37","charity":"$149539.63"},
+        {"id":31,"sector":"Technology","industry":"Uniform Charlie Sierra Echo Yankee Delta Lima Zulu Oscar Alfa Foxtrot Juliett Kilo X-ray Hotel Whiskey Papa Golf Romeo India","company":"Dabshots","income":"$198451.51","expenses":"$250543.12","profit":"$146340.09","taxes":"$347777.16","Stock Market Cap":"$42.87M","environmental credits":"$345049.05","charity":"$276375.88"},
+        {"id":32,"sector":"Basic Industries","industry":"Echo Hotel India Kilo Oscar November Foxtrot Whiskey Golf Mike Delta Victor Lima Yankee Sierra Alfa Romeo","company":"Realblab","income":"$578307.39","expenses":"$649726.22","profit":"$448306.71","taxes":"$214216.25","Stock Market Cap":"$32.58B","environmental credits":"$66356.55","charity":"$579898.17"},
+        {"id":33,"sector":"n/a","industry":"Charlie Zulu Quebec Kilo Sierra Lima Romeo Yankee Golf Delta Juliett Victor Tango Echo Hotel","company":"Dabvine","income":"$447174.59","expenses":"$744241.40","profit":"$116748.36","taxes":"$747130.07","Stock Market Cap":"n/a","environmental credits":"$577237.41","charity":"$645763.28"},
+        {"id":34,"sector":"Finance","industry":"Echo Papa Victor Kilo Uniform Hotel Mike Foxtrot Lima Tango November India Romeo Golf Sierra Zulu Alfa","company":"Avaveo","income":"$714303.04","expenses":"$392868.98","profit":"$919456.78","taxes":"$989465.54","Stock Market Cap":"$332.53M","environmental credits":"$321499.50","charity":"$912181.61"},
+        {"id":35,"sector":"n/a","industry":"Romeo Sierra Juliett Foxtrot Tango Delta Golf Papa India X-ray Alfa Lima Charlie Bravo Uniform Mike Zulu Kilo November","company":"Viva","income":"$113090.40","expenses":"$868631.91","profit":"$189914.30","taxes":"$451370.88","Stock Market Cap":"n/a","environmental credits":"$754623.93","charity":"$820417.85"},
+        {"id":36,"sector":"Consumer Non-Durables","industry":"Hotel Yankee Juliett Foxtrot Papa Romeo Golf Alfa Uniform India","company":"Lazz","income":"$270732.80","expenses":"$66235.33","profit":"$429787.94","taxes":"$103134.45","Stock Market Cap":"$2.29B","environmental credits":"$109963.17","charity":"$668019.56"},
+        {"id":37,"sector":"Technology","industry":"November Yankee Papa Romeo Victor Echo India Charlie Zulu Foxtrot Oscar X-ray","company":"Riffpath","income":"$656378.91","expenses":"$792296.12","profit":"$874525.93","taxes":"$30104.35","Stock Market Cap":"$436.58B","environmental credits":"$934590.07","charity":"$736332.24"},
+        {"id":38,"sector":"Health Care","industry":"Alfa Bravo Charlie Kilo Mike India Papa Yankee Tango Hotel Lima Golf Sierra Delta Foxtrot Romeo Uniform","company":"Meembee","income":"$235276.98","expenses":"$208372.13","profit":"$706407.51","taxes":"$269319.59","Stock Market Cap":"$1.8B","environmental credits":"$500775.25","charity":"$417112.21"},
+        {"id":39,"sector":"Finance","industry":"Kilo Yankee Quebec Mike Lima Zulu Romeo Whiskey Charlie Papa","company":"Izio","income":"$398888.16","expenses":"$78795.63","profit":"$392008.84","taxes":"$885745.74","Stock Market Cap":"n/a","environmental credits":"$386348.78","charity":"$497395.84"},
+        {"id":40,"sector":"Consumer Services","industry":"Golf November Echo Kilo Delta Uniform Foxtrot Victor Tango Charlie Bravo Whiskey Yankee Alfa X-ray Quebec Oscar India Zulu Romeo","company":"Demizz","income":"$257070.11","expenses":"$779882.53","profit":"$392793.84","taxes":"$47717.23","Stock Market Cap":"$523.31M","environmental credits":"$589634.93","charity":"$636387.44"},
+        {"id":41,"sector":"n/a","industry":"Delta November Hotel Yankee X-ray Charlie Sierra Zulu Tango Quebec Papa Juliett Bravo India Echo Foxtrot Uniform Oscar Kilo","company":"Topicstorm","income":"$279372.34","expenses":"$782752.08","profit":"$368870.53","taxes":"$235345.48","Stock Market Cap":"$21.32M","environmental credits":"$453173.39","charity":"$300701.19"},
+        {"id":42,"sector":"Consumer Services","industry":"Tango Quebec Papa Zulu India Mike Charlie Alfa Bravo Whiskey X-ray Victor Sierra Lima Echo Delta Oscar Hotel","company":"Trilia","income":"$526568.96","expenses":"$360564.59","profit":"$269485.21","taxes":"$610295.28","Stock Market Cap":"n/a","environmental credits":"$753246.29","charity":"$584653.59"},
+        {"id":43,"sector":"Finance","industry":"Tango Foxtrot Hotel Alfa X-ray Lima Golf Echo Kilo Uniform Papa November Romeo Quebec Mike Oscar","company":"Reallinks","income":"$632003.87","expenses":"$851853.05","profit":"$64889.24","taxes":"$409661.67","Stock Market Cap":"$375.34M","environmental credits":"$402316.37","charity":"$816075.33"},
+        {"id":44,"sector":"Finance","industry":"Hotel Oscar Juliett Papa Charlie Delta Zulu Mike Quebec Tango X-ray Whiskey Uniform Lima Victor","company":"DabZ","income":"$771901.37","expenses":"$554076.42","profit":"$754237.85","taxes":"$253609.86","Stock Market Cap":"$1.06B","environmental credits":"$34860.97","charity":"$975483.93"},
+        {"id":45,"sector":"n/a","industry":"Juliett Hotel Lima Golf Quebec Bravo Sierra Victor Tango Romeo Whiskey Yankee Echo Alfa Delta","company":"Mymm","income":"$58866.68","expenses":"$959324.46","profit":"$759870.57","taxes":"$950400.68","Stock Market Cap":"$653.44M","environmental credits":"$670308.09","charity":"$734760.66"},
+        {"id":46,"sector":"Finance","industry":"Lima India Foxtrot Yankee Uniform Alfa Whiskey Victor Kilo Papa","company":"Realbridge","income":"$946555.43","expenses":"$903727.90","profit":"$214797.11","taxes":"$184144.72","Stock Market Cap":"$3.43B","environmental credits":"$115761.91","charity":"$460675.47"},
+        {"id":47,"sector":"Finance","industry":"Bravo Delta Lima Victor Whiskey Mike India Yankee Oscar Hotel Uniform Juliett Zulu November Echo","company":"Oozz","income":"$216178.90","expenses":"$602337.97","profit":"$320540.86","taxes":"$525497.63","Stock Market Cap":"$19.11B","environmental credits":"$455934.72","charity":"$812992.18"},
+        {"id":48,"sector":"Miscellaneous","industry":"Hotel Kilo Oscar Tango Romeo Sierra Alfa India Whiskey Lima Echo Charlie Yankee Delta Zulu Juliett November Uniform","company":"Skaboo","income":"$868431.59","expenses":"$982111.54","profit":"$249753.92","taxes":"$331213.31","Stock Market Cap":"$38.48B","environmental credits":"$300076.49","charity":"$285202.55"},
+        {"id":49,"sector":"Technology","industry":"Zulu Golf Quebec Alfa X-ray India Papa Romeo Lima Uniform","company":"Shufflester","income":"$5244.99","expenses":"$721813.01","profit":"$52757.01","taxes":"$25167.07","Stock Market Cap":"$5.07B","environmental credits":"$809685.94","charity":"$316244.59"},
+        {"id":50,"sector":"Consumer Non-Durables","industry":"Kilo Victor Charlie Papa Lima Oscar Foxtrot Whiskey Romeo Zulu Alfa Mike Delta India Uniform","company":"Eire","income":"$439433.91","expenses":"$813306.00","profit":"$713267.39","taxes":"$391895.58","Stock Market Cap":"$1.14B","environmental credits":"$351482.12","charity":"$12236.76"},
+        {"id":51,"sector":"Finance","industry":"Papa Oscar Mike Delta Romeo Foxtrot Bravo Victor Yankee Lima","company":"Voomm","income":"$165581.24","expenses":"$249869.97","profit":"$589461.45","taxes":"$145131.75","Stock Market Cap":"$804.39M","environmental credits":"$595923.51","charity":"$99993.46"},
+        {"id":52,"sector":"Technology","industry":"India Uniform Bravo Echo Hotel Oscar Sierra Romeo Yankee Juliett","company":"Midel","income":"$414388.91","expenses":"$256877.29","profit":"$523923.73","taxes":"$466592.66","Stock Market Cap":"$80.04M","environmental credits":"$374547.72","charity":"$933762.13"},
+        {"id":53,"sector":"Consumer Durables","industry":"Uniform Bravo Mike Golf Charlie Juliett Tango Echo Quebec Delta Lima Whiskey Romeo Yankee Foxtrot","company":"Yacero","income":"$513282.91","expenses":"$587997.73","profit":"$779703.59","taxes":"$56901.71","Stock Market Cap":"$52.17M","environmental credits":"$407343.74","charity":"$473492.93"},
+        {"id":54,"sector":"Capital Goods","industry":"Alfa X-ray Golf Bravo Echo Romeo Yankee Charlie Oscar Kilo Zulu Whiskey Lima Tango Foxtrot India November Papa","company":"Eire","income":"$827433.96","expenses":"$978775.13","profit":"$631584.82","taxes":"$161684.76","Stock Market Cap":"$3.16B","environmental credits":"$441197.07","charity":"$394386.48"},
+        {"id":55,"sector":"Consumer Services","industry":"Mike Bravo Victor Zulu Quebec Yankee Lima Juliett Foxtrot Alfa Echo Uniform Golf Whiskey Kilo Romeo India Oscar Papa","company":"Skyvu","income":"$857228.26","expenses":"$954514.49","profit":"$234960.13","taxes":"$895835.96","Stock Market Cap":"$133.85M","environmental credits":"$467442.79","charity":"$253562.11"},
+        {"id":56,"sector":"Basic Industries","industry":"Echo November Zulu Tango Lima Yankee Sierra Juliett Bravo Oscar Foxtrot Mike Golf Charlie Whiskey Uniform Papa Romeo India","company":"Camimbo","income":"$71313.45","expenses":"$216115.85","profit":"$687919.36","taxes":"$387232.69","Stock Market Cap":"$2.55B","environmental credits":"$679030.68","charity":"$406717.39"},
+        {"id":57,"sector":"Energy","industry":"Mike Victor Delta Hotel Yankee Foxtrot Juliett X-ray Kilo Papa Quebec Tango Alfa Golf Uniform Echo Sierra India","company":"Skyble","income":"$316141.99","expenses":"$770597.43","profit":"$258038.17","taxes":"$299728.67","Stock Market Cap":"$1.92B","environmental credits":"$931269.06","charity":"$692544.48"},
+        {"id":58,"sector":"Energy","industry":"Romeo Whiskey November Oscar Yankee Lima Sierra Alfa Zulu India","company":"Rhybox","income":"$905874.53","expenses":"$622599.04","profit":"$846195.45","taxes":"$906657.28","Stock Market Cap":"$299.85M","environmental credits":"$10915.02","charity":"$736585.45"},
+        {"id":59,"sector":"Capital Goods","industry":"Juliett Bravo Uniform Sierra Tango Golf Oscar Echo Quebec Foxtrot","company":"Topiczoom","income":"$247296.59","expenses":"$741499.88","profit":"$945400.84","taxes":"$234765.40","Stock Market Cap":"$21.61B","environmental credits":"$808312.85","charity":"$424933.70"},
+        {"id":60,"sector":"Basic Industries","industry":"Alfa Whiskey India Romeo Foxtrot Mike Golf Uniform Zulu Kilo Oscar Quebec X-ray Papa Yankee Hotel Juliett","company":"Kaymbo","income":"$251141.11","expenses":"$850653.83","profit":"$975357.43","taxes":"$633475.02","Stock Market Cap":"$8.55B","environmental credits":"$895956.90","charity":"$649430.95"},
+        {"id":61,"sector":"Consumer Services","industry":"Oscar Bravo Victor Sierra Yankee Alfa Juliett November Delta Echo","company":"Topiczoom","income":"$222458.21","expenses":"$114689.84","profit":"$200588.42","taxes":"$876130.09","Stock Market Cap":"$313.01M","environmental credits":"$294736.71","charity":"$327007.60"},
+        {"id":62,"sector":"Consumer Services","industry":"Sierra Uniform X-ray Golf India Romeo November Delta Oscar Hotel Alfa","company":"Edgeblab","income":"$160151.99","expenses":"$49711.65","profit":"$827320.42","taxes":"$610187.81","Stock Market Cap":"$40.17M","environmental credits":"$959134.04","charity":"$960855.08"},
+        {"id":63,"sector":"Finance","industry":"Whiskey Papa Golf Oscar Yankee Bravo Romeo X-ray India Sierra Echo Hotel Foxtrot November Mike Alfa Tango","company":"Dynazzy","income":"$134213.24","expenses":"$620112.80","profit":"$720914.91","taxes":"$644948.61","Stock Market Cap":"$785.49M","environmental credits":"$942394.52","charity":"$188392.57"},
+        {"id":64,"sector":"Health Care","industry":"Whiskey Mike Hotel Kilo Echo Alfa Victor Romeo Juliett Uniform Golf Sierra Lima Delta","company":"Jabbertype","income":"$826691.24","expenses":"$323297.89","profit":"$302182.51","taxes":"$196027.88","Stock Market Cap":"$809.46M","environmental credits":"$948294.04","charity":"$93175.88"},
+        {"id":65,"sector":"Consumer Services","industry":"Tango Papa Golf Victor November Sierra Juliett Delta Charlie Bravo Zulu Whiskey Echo","company":"Jabbertype","income":"$724397.81","expenses":"$517307.91","profit":"$843785.22","taxes":"$199444.32","Stock Market Cap":"$3.62B","environmental credits":"$564233.51","charity":"$312247.95"},
+        {"id":66,"sector":"Consumer Services","industry":"Zulu Bravo India Whiskey X-ray Hotel Uniform Golf Alfa November Oscar Foxtrot Kilo Mike Delta Yankee Lima Sierra Tango","company":"Wordtune","income":"$168506.71","expenses":"$315828.79","profit":"$619838.59","taxes":"$790781.41","Stock Market Cap":"$4.51B","environmental credits":"$740880.39","charity":"$64740.54"},
+        {"id":67,"sector":"Health Care","industry":"Charlie Victor Golf Sierra Yankee Hotel Zulu Alfa November Echo Uniform Foxtrot Juliett Tango Delta India X-ray Papa Kilo Oscar","company":"Jazzy","income":"$694244.52","expenses":"$731210.67","profit":"$863507.61","taxes":"$547926.16","Stock Market Cap":"$1.88B","environmental credits":"$959754.17","charity":"$413205.62"},
+        {"id":68,"sector":"Energy","industry":"Sierra Whiskey Foxtrot Tango Romeo Delta Bravo Lima Zulu Victor","company":"Demizz","income":"$382605.76","expenses":"$189535.76","profit":"$473991.34","taxes":"$546491.19","Stock Market Cap":"$287.94M","environmental credits":"$882135.60","charity":"$808220.46"},
+        {"id":69,"sector":"n/a","industry":"Tango Uniform Victor Quebec Whiskey Sierra Zulu November Lima Yankee Romeo Golf Delta Alfa Juliett X-ray Papa Bravo Oscar Echo","company":"Abata","income":"$807100.73","expenses":"$850437.86","profit":"$63014.50","taxes":"$617461.79","Stock Market Cap":"n/a","environmental credits":"$662240.17","charity":"$474930.61"},
+        {"id":70,"sector":"n/a","industry":"Papa X-ray Lima Romeo Echo Yankee Bravo Sierra Delta Hotel Golf Tango","company":"Trudoo","income":"$214332.83","expenses":"$253732.57","profit":"$857732.25","taxes":"$75112.03","Stock Market Cap":"n/a","environmental credits":"$871440.67","charity":"$693606.37"},
+        {"id":71,"sector":"Consumer Services","industry":"Golf Oscar X-ray Yankee Charlie Quebec Foxtrot Zulu Papa Hotel Victor Juliett Mike Uniform Bravo Lima Delta India Echo Alfa","company":"Eamia","income":"$690452.93","expenses":"$209443.72","profit":"$83618.22","taxes":"$627769.05","Stock Market Cap":"$5.12B","environmental credits":"$121988.43","charity":"$942164.68"},
+        {"id":72,"sector":"Health Care","industry":"Hotel Kilo Tango Uniform Delta Mike Sierra November Zulu Bravo Foxtrot Charlie Golf X-ray Romeo Yankee Quebec Echo","company":"Camido","income":"$697115.03","expenses":"$564713.18","profit":"$331966.21","taxes":"$531761.53","Stock Market Cap":"$146.7M","environmental credits":"$655511.35","charity":"$952623.41"},
+        {"id":73,"sector":"Technology","industry":"Charlie Hotel Kilo Bravo X-ray Oscar Uniform Lima Juliett Romeo Yankee Alfa Sierra Papa Foxtrot November Whiskey","company":"Flashpoint","income":"$219758.10","expenses":"$194246.08","profit":"$370851.23","taxes":"$625960.14","Stock Market Cap":"$1.08B","environmental credits":"$49535.56","charity":"$322951.11"},
+        {"id":74,"sector":"Basic Industries","industry":"Papa X-ray Lima Foxtrot Hotel Uniform Romeo Bravo Whiskey Sierra Delta Yankee Oscar Victor Golf India Echo","company":"Lazzy","income":"$56105.73","expenses":"$428750.19","profit":"$115272.46","taxes":"$508000.76","Stock Market Cap":"$31.68B","environmental credits":"$552443.56","charity":"$742211.68"},
+        {"id":75,"sector":"n/a","industry":"Kilo Whiskey Uniform Juliett Delta Echo Yankee X-ray Victor Golf Tango Alfa Quebec Papa Hotel Oscar Bravo Charlie Foxtrot","company":"Tagopia","income":"$762752.01","expenses":"$573566.23","profit":"$668456.80","taxes":"$314319.24","Stock Market Cap":"$696.23M","environmental credits":"$701632.13","charity":"$126658.56"},
+        {"id":76,"sector":"Transportation","industry":"Whiskey Mike Hotel Juliett Romeo Zulu X-ray Yankee Foxtrot Tango Golf Uniform November Echo Quebec Kilo Sierra","company":"Flipstorm","income":"$105847.89","expenses":"$917266.74","profit":"$744520.44","taxes":"$746118.47","Stock Market Cap":"$70.38M","environmental credits":"$874972.37","charity":"$356945.78"},
+        {"id":77,"sector":"Finance","industry":"Victor Hotel Quebec Golf November Zulu Whiskey Yankee Lima Echo Charlie Papa Bravo Delta","company":"Zoomzone","income":"$97403.22","expenses":"$821434.27","profit":"$95098.77","taxes":"$130519.54","Stock Market Cap":"$8.43B","environmental credits":"$146055.37","charity":"$525700.02"},
+        {"id":78,"sector":"Technology","industry":"Mike Oscar Victor Papa Uniform Lima Golf X-ray Delta Zulu","company":"Bubblemix","income":"$587379.49","expenses":"$731269.74","profit":"$411980.73","taxes":"$553009.07","Stock Market Cap":"$51.37M","environmental credits":"$749873.29","charity":"$43758.01"},
+        {"id":79,"sector":"Technology","industry":"Golf Whiskey Romeo Kilo Uniform Hotel Alfa Foxtrot India November Victor Delta Zulu","company":"Tavu","income":"$310414.61","expenses":"$964714.70","profit":"$875552.31","taxes":"$399381.43","Stock Market Cap":"$1.06B","environmental credits":"$481073.88","charity":"$811465.79"},
+        {"id":80,"sector":"Finance","industry":"Victor Charlie Zulu Juliett Hotel Papa Romeo Alfa November Echo Golf Lima Oscar Sierra X-ray Bravo Quebec","company":"Centizu","income":"$38025.75","expenses":"$12979.76","profit":"$967487.75","taxes":"$969684.12","Stock Market Cap":"$144.38M","environmental credits":"$816796.02","charity":"$223905.13"},
+        {"id":81,"sector":"Technology","industry":"Mike Oscar Sierra Kilo November Lima Hotel Whiskey Echo X-ray India Alfa Bravo Charlie Victor Foxtrot Juliett","company":"Zooveo","income":"$851169.27","expenses":"$701006.25","profit":"$620740.44","taxes":"$83834.34","Stock Market Cap":"$45.41M","environmental credits":"$458877.34","charity":"$699063.98"},
+        {"id":82,"sector":"Consumer Services","industry":"India Bravo Victor Kilo Golf November Hotel Tango Quebec Mike Echo Oscar Delta Zulu Lima","company":"Divape","income":"$30626.08","expenses":"$763597.44","profit":"$37641.28","taxes":"$737061.33","Stock Market Cap":"$196.12M","environmental credits":"$102352.79","charity":"$851104.51"},
+        {"id":83,"sector":"Consumer Services","industry":"Oscar Whiskey Golf Juliett India Alfa Papa Charlie Sierra Echo Lima November Delta Mike","company":"Zoombeat","income":"$293715.65","expenses":"$533263.16","profit":"$613971.84","taxes":"$875217.80","Stock Market Cap":"$1.51B","environmental credits":"$619923.58","charity":"$414373.29"},
+        {"id":84,"sector":"n/a","industry":"Tango November Charlie Victor Papa India Quebec Juliett Zulu Hotel Uniform Foxtrot Oscar Mike Bravo X-ray Lima Echo Sierra","company":"Ozu","income":"$275073.05","expenses":"$649188.89","profit":"$817861.96","taxes":"$863478.35","Stock Market Cap":"$238.94M","environmental credits":"$287272.81","charity":"$464981.10"},
+        {"id":85,"sector":"Energy","industry":"Foxtrot Hotel Zulu Uniform X-ray Kilo Quebec Alfa Oscar Bravo","company":"Gigazoom","income":"$712897.96","expenses":"$519313.46","profit":"$956540.92","taxes":"$689275.37","Stock Market Cap":"$1.9B","environmental credits":"$245934.36","charity":"$475183.63"},
+        {"id":86,"sector":"Consumer Services","industry":"Victor Lima Kilo Alfa Oscar Hotel X-ray Delta Charlie Bravo Sierra Quebec India Yankee Tango Golf","company":"Skinix","income":"$259758.51","expenses":"$314329.08","profit":"$682857.90","taxes":"$216002.28","Stock Market Cap":"n/a","environmental credits":"$707092.05","charity":"$353232.93"},
+        {"id":87,"sector":"n/a","industry":"Hotel Whiskey Mike Tango Charlie Yankee Echo Kilo Bravo Quebec India Victor Lima Papa X-ray Juliett November Romeo Sierra Zulu","company":"Abatz","income":"$890247.52","expenses":"$809681.01","profit":"$520822.04","taxes":"$544783.16","Stock Market Cap":"n/a","environmental credits":"$835903.80","charity":"$901802.87"},
+        {"id":88,"sector":"Consumer Services","industry":"Mike Delta Charlie Zulu India Kilo Alfa Echo X-ray November Romeo","company":"Cogidoo","income":"$625686.76","expenses":"$24701.52","profit":"$929657.04","taxes":"$721637.55","Stock Market Cap":"$803.43M","environmental credits":"$210281.60","charity":"$748962.84"},
+        {"id":89,"sector":"Consumer Services","industry":"Yankee Juliett Romeo Mike Uniform November Tango Charlie Quebec Oscar Hotel India Victor Golf Whiskey Bravo Zulu Echo Foxtrot Papa","company":"Jaxworks","income":"$389578.33","expenses":"$601171.31","profit":"$269721.49","taxes":"$956241.83","Stock Market Cap":"$56.08B","environmental credits":"$845568.43","charity":"$372935.70"},
+        {"id":90,"sector":"Technology","industry":"X-ray Bravo Golf Mike Alfa Uniform Zulu Kilo Romeo Foxtrot India Juliett Quebec Sierra Yankee Charlie Delta Echo","company":"Riffwire","income":"$393066.33","expenses":"$597305.76","profit":"$855927.97","taxes":"$988213.57","Stock Market Cap":"$90.18M","environmental credits":"$515893.58","charity":"$467054.81"},
+        {"id":91,"sector":"n/a","industry":"Bravo Papa Foxtrot Lima Juliett Hotel Alfa Echo November X-ray Victor Sierra Tango Whiskey Romeo Golf","company":"Youfeed","income":"$319787.50","expenses":"$667617.19","profit":"$767214.73","taxes":"$428892.52","Stock Market Cap":"$84.33M","environmental credits":"$753091.83","charity":"$762869.27"},
+        {"id":92,"sector":"Technology","industry":"Yankee X-ray Charlie Hotel Mike Zulu Juliett India Tango Kilo Bravo Victor Romeo Lima Echo November Golf Oscar Alfa Uniform","company":"Feedfire","income":"$612044.61","expenses":"$778900.54","profit":"$155499.53","taxes":"$23950.20","Stock Market Cap":"$1.61B","environmental credits":"$817632.86","charity":"$938665.71"},
+        {"id":93,"sector":"Health Care","industry":"Juliett Papa Hotel Golf Whiskey Romeo Yankee Quebec X-ray Uniform","company":"LiveZ","income":"$809943.84","expenses":"$553195.12","profit":"$670377.74","taxes":"$816508.11","Stock Market Cap":"$760.16M","environmental credits":"$843907.49","charity":"$899037.57"},
+        {"id":94,"sector":"Transportation","industry":"Quebec India Golf Tango Mike Zulu Whiskey Juliett X-ray Charlie Delta Victor Uniform Kilo Romeo November Yankee","company":"Gabvine","income":"$487599.31","expenses":"$82102.03","profit":"$237486.24","taxes":"$908929.91","Stock Market Cap":"$658.35M","environmental credits":"$977946.53","charity":"$892176.22"},
+        {"id":95,"sector":"n/a","industry":"Papa Whiskey Alfa Tango Bravo Romeo Foxtrot Oscar Victor X-ray","company":"Babblestorm","income":"$964186.00","expenses":"$850301.20","profit":"$877029.25","taxes":"$908560.40","Stock Market Cap":"$156.37M","environmental credits":"$396197.01","charity":"$849226.21"},
+        {"id":96,"sector":"Finance","industry":"Alfa X-ray Whiskey Quebec India Juliett Oscar November Delta Uniform Kilo Yankee Tango Zulu","company":"Youfeed","income":"$311121.97","expenses":"$313385.85","profit":"$673159.80","taxes":"$738993.25","Stock Market Cap":"n/a","environmental credits":"$97549.40","charity":"$136487.67"},
+        {"id":97,"sector":"Finance","industry":"India Tango Whiskey Juliett Romeo Oscar Mike Quebec Kilo Victor Lima Bravo Yankee November Uniform X-ray Echo Hotel Sierra","company":"Leexo","income":"$74203.24","expenses":"$287942.02","profit":"$701221.65","taxes":"$313722.88","Stock Market Cap":"$34.79M","environmental credits":"$631194.69","charity":"$171751.82"},
+        {"id":98,"sector":"Basic Industries","industry":"Echo Golf Alfa Charlie Kilo Tango Delta Papa India Bravo Mike Whiskey Victor Juliett Sierra Zulu","company":"Latz","income":"$356222.59","expenses":"$96736.49","profit":"$36256.88","taxes":"$49459.50","Stock Market Cap":"$157.69B","environmental credits":"$696071.70","charity":"$484974.59"},
+        {"id":99,"sector":"Technology","industry":"November Romeo Delta Papa X-ray Quebec Victor Whiskey Zulu Juliett Bravo Yankee Tango Alfa","company":"Chatterbridge","income":"$723580.27","expenses":"$706744.04","profit":"$477043.59","taxes":"$871217.03","Stock Market Cap":"$5.07B","environmental credits":"$945818.61","charity":"$990865.38"},
+        {"id":100,"sector":"Consumer Non-Durables","industry":"Uniform Bravo November Victor Delta X-ray Juliett Lima Mike Zulu","company":"Oyondu","income":"$213514.84","expenses":"$741262.55","profit":"$754775.04","taxes":"$416154.58","Stock Market Cap":"$1.24B","environmental credits":"$539131.25","charity":"$768384.12"}
+        
+    ];
+    </script>  
   </body>
 </html>
